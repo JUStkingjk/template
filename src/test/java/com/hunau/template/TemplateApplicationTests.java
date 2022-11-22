@@ -8,6 +8,7 @@ class TemplateApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("测试方法");
     }
 
 }
