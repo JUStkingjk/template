@@ -2,7 +2,6 @@ package com.hunau.template.Service;
 
 import com.hunau.template.entity.Data;
 import com.hunau.template.mapper.DataMapper;
-import org.springframework.jdbc.support.incrementer.DataFieldMaxValueIncrementer;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,7 +15,7 @@ public class DataServiceImpl implements DataService{
 
     @Override
     public List<Data> getAllData() {
-        return null;
+        return dataMapper.checkData();
     }
 
     @Override

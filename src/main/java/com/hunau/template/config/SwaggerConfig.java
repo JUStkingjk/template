@@ -1,5 +1,6 @@
 package com.hunau.template.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -13,6 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
+    @Bean
     public Docket createRestApi(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
@@ -25,7 +27,7 @@ public class SwaggerConfig {
     public ApiInfo apiInfo(){
         return new ApiInfoBuilder()
                 .title("项目 swagger 界面")
-                .description("莫忘滴水之恩")
+                .description("人人为我，我为人人")
                 .version("1.0")
                 .build();
     }

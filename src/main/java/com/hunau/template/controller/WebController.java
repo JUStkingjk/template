@@ -1,28 +1,18 @@
 package com.hunau.template.controller;
 
-import com.hunau.template.Service.DataService;
-import com.hunau.template.entity.Data;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 @Controller
+@Api(value = "controller - data show")
 public class WebController {
 
-    @Resource
-    private DataService dataService;
-
-    @GetMapping("/dataShow")
+    @GetMapping("/hello")
+    @ApiOperation(value = "返回html")
     public String web(){
         return "index";
     }
 
-    @GetMapping("/getAll")
-    @ResponseBody
-    public List<Data> getAllData(){
-        return dataService.getAllData();
-    }
 }

@@ -1,6 +1,6 @@
 package com.hunau.template.mapper;
 
-import lombok.Data;
+import com.hunau.template.entity.Data;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
